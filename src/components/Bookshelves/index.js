@@ -7,7 +7,7 @@ import {BsSearch} from 'react-icons/bs'
 import FiltersBook from '../FiltersBook'
 import Books from '../Books'
 import Header from '../Header'
-import FooterSection from '../FooterSection'
+// import FooterSection from '../FooterSection'
 import './index.css'
 
 const booksList = [
@@ -41,7 +41,6 @@ class Bookshelves extends Component {
     bookShelvesList: [],
     searchInput: '',
     activeCategoryId: booksList[0].employmentTypeId,
-    // heading: booksList[0].name,
   }
 
   componentDidMount() {
@@ -61,7 +60,7 @@ class Bookshelves extends Component {
       },
     }
     const response = await fetch(url, options)
-    console.log(response)
+    //  console.log(response)
     if (response.ok === true) {
       const fetchedData = await response.json()
       const updatedData = fetchedData.books.map(eachBook => ({
@@ -72,7 +71,7 @@ class Bookshelves extends Component {
         authorName: eachBook.author_name,
         coverPic: eachBook.cover_pic,
       }))
-      console.log(updatedData)
+      // console.log(updatedData)
       this.setState({
         bookShelvesList: updatedData,
         apiStatus: apiStatusConstants.success,
@@ -166,16 +165,20 @@ class Bookshelves extends Component {
                 Bookshelves
               </h1>
               <ul className="bookshelves-ul-menu">
-                <FiltersBook
-                  booksList={booksList}
-                  changeCategory={this.changeCategory}
-                  activeCategoryId={activeCategoryId}
-                />
+                <li>
+                  <FiltersBook
+                    booksList={booksList}
+                    changeCategory={this.changeCategory}
+                    activeCategoryId={activeCategoryId}
+                  />
+                </li>
               </ul>
             </div>
             <div className="bookshelves-main-container">
               <div className="bookshelves-main-search-container">
-                <p className="bookshelves-main-heading">All Books</p>
+                <p className="bookshelves-main-heading">
+                  {activeCategoryId} Books
+                </p>
                 <div className="search-container">
                   <input
                     className="bookshelves-search-input-value"
@@ -195,10 +198,51 @@ class Bookshelves extends Component {
                 </div>
               </div>
               {this.renderAllBooks()}
+              <div className="home-footer-container">
+                <div className="home-footer-icon-container">
+                  <h1>Google</h1>
+                </div>
+                <p className="">Contact us</p>
+              </div>
+            </div>
+            <div className="bookshelves-parent-container-small">
+              <div className="bookshelves-bg-container-small">
+                <div className="bookshelves-search-container-small">
+                  <input
+                    type="search"
+                    placeholder="Search"
+                    className="bookshelves-search-input-container-small"
+                    onChange={this.onSearchInput}
+                    onKeyDown={this.onEnterSearchInput}
+                  />
+                  <button
+                    className="bookshelves-search-input-button-small"
+                    type="button"
+                    onClick={this.getBookshelves}
+                    key="label"
+                  >
+                    <BsSearch className="bookshelves-icon-small" />
+                  </button>
+                </div>
+                <div className="bookshelves-menu-container-small">
+                  <h1 className="bookshelves-menu-container-heading-small">
+                    Bookshelves
+                  </h1>
+                  <ul className="bookshelves-ul-menu">
+                    <li>
+                      <FiltersBook
+                        booksList={booksList}
+                        changeCategory={this.changeCategory}
+                        activeCategoryId={activeCategoryId}
+                      />
+                    </li>
+                  </ul>
+                  {this.renderAllBooks()}
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <FooterSection />
       </>
     )
   }

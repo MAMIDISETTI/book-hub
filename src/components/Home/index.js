@@ -39,7 +39,7 @@ class Home extends Component {
     const response = await fetch(url, options)
     if (response.ok === true) {
       const fetchedData = await response.json()
-      console.log(fetchedData)
+      // console.log(fetchedData)
 
       const updatedData = fetchedData.books.map(product => ({
         id: product.id,
@@ -83,7 +83,7 @@ class Home extends Component {
     const {booksList} = this.state
     return (
       <>
-        <ReactSlick booksList={booksList} key={booksList.id} />
+        <ReactSlick booksLists={booksList} />
       </>
     )
   }
@@ -127,6 +127,7 @@ class Home extends Component {
                   </Link>
                 </div>
                 {this.renderAllSliders()}
+                <FooterSection />
               </div>
             </div>
             <div className="home-container-main-small">
@@ -153,7 +154,6 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        <FooterSection />
       </>
     )
   }

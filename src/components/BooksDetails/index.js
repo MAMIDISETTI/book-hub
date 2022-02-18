@@ -76,30 +76,40 @@ class BooksDetails extends Component {
     } = jobData
     return (
       <>
-        <div className="">
-          <img src={coverPic} alt={title} className="" />
-          <div className="">
-            <h1 className="">{title}</h1>
-            <p className="">{authorName}</p>
-            <div className="">
-              <p className="">Avg Rating</p>
-              <div className="">
-                <BsStarFill className="" />
-                <p className="">{rating}</p>
+        <div className="book-detail-container-main">
+          <div className="book-detail-sub-container">
+            <div className="book-detail-bg-container">
+              <div className="book-image-container">
+                <img
+                  src={coverPic}
+                  alt={title}
+                  className="book-image-cover-pic"
+                />
+                <div className="bool-details-heading-container">
+                  <p className="book-details-heading-title">{title}</p>
+                  <p className="book-details-heading-author-name">
+                    {authorName}
+                  </p>
+                  <div className="book-details-heading-items-rating-container">
+                    <p className="book-details-heading-rating">Avg Rating</p>
+                    <BsStarFill className="book-details-heading-rating-icon" />
+                    <p className="book-details-heading-rating">{rating}</p>
+                  </div>
+                  <div className="book-details-heading-rating-containers">
+                    <p className="book-status-item">Status: </p>
+                    <p className="book-status-items">{readStatus}</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="">
-              <p className="">Status:</p>
-              <p className="">{readStatus}</p>
+            <hr className="book-details-hr" />
+            <div className="book-about-container">
+              <h1 className="about-container-heading">About Author</h1>
+              <p className="about-container-content">{aboutAuthor}</p>
+              <h1 className="about-container-heading">About Book</h1>
+              <p className="about-container-content">{aboutBook}</p>
             </div>
           </div>
-        </div>
-        <hr className="" />
-        <div className="">
-          <h1 className="">About Author</h1>
-          <p className="">{aboutAuthor}</p>
-          <h1 className="">About Book</h1>
-          <p className="">{aboutBook}</p>
         </div>
       </>
     )

@@ -17,6 +17,11 @@
   padding-left: 32px;
   padding-top: 32px;
 }
+@media screen and (max-width: 765px) {
+  .bookshelves-menu-container {
+    display: none;
+  }
+}
 .bookshelves-menu-container-heading {
   font-family: Inter;
   font-size: 20px;
@@ -34,6 +39,11 @@
 .bookshelves-main-container {
   margin-left: 32px;
   width: 100%;
+}
+@media screen and (max-width: 765px) {
+  .bookshelves-main-container {
+    display: none;
+  }
 }
 .bookshelves-main-search-container {
   display: flex;
@@ -71,6 +81,9 @@
   left: 1237px;
   border: none;
 }
+.bookshelves-icon {
+  color: #94a3b8;
+}
 .bookshelves-render-all-books {
   display: flex;
   flex-direction: row;
@@ -80,6 +93,51 @@
   flex-wrap: wrap;
 }
 
+.bookshelves-parent-container-small {
+  flex-direction: column;
+  background-color: #f5f7fa;
+}
+@media screen and (min-width: 765px) {
+  .bookshelves-parent-container-small {
+    display: none;
+  }
+}
+.bookshelves-bg-container-small {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 40px;
+}
+.bookshelves-search-container-small {
+  margin-top: 24px;
+}
+.bookshelves-search-input-container-small {
+  height: 37px;
+  width: 264px;
+  left: 0;
+  padding-left: 16px;
+  top: 0;
+  outline: none;
+  border: 1px solid #cbd5e1;
+}
+.bookshelves-search-input-button-small {
+  height: 36px;
+  width: 52px;
+  left: 1237px;
+  border: none;
+}
+.bookshelves-icon-small {
+  color: #94a3b8;
+}
+.bookshelves-menu-container-heading-small {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: left;
+}
 /*    */
 
 .bookshelves-input-container {
@@ -96,9 +154,7 @@
   background-color: #edeff1;
   border: none;
 }
-.bookshelves-icon {
-  color: #94a3b8;
-}
+
 .bookshelves-heading {
   font-family: Inter;
   font-style: normal;

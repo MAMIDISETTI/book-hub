@@ -1,0 +1,128 @@
+.book-detail-container-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7fa;
+  min-height: 150vh;
+}
+.book-detail-sub-container {
+  height: 726px;
+  max-width: 1140px;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 16px;
+}
+.book-detail-bg-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 64px;
+}
+.book-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.book-image-cover-pic {
+  height: 274px;
+  width: 235px;
+  border-radius: 8px;
+}
+.bool-details-heading-container {
+  margin-left: 48px;
+}
+.book-details-heading-title {
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #334155;
+}
+.book-details-heading-author-name {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 12px;
+  text-align: left;
+  color: #475569;
+}
+.book-details-heading-items-rating-container {
+  display: flex;
+  flex-direction: row;
+  color: #475569;
+  align-items: center;
+  margin-top: 8px;
+}
+.book-details-heading-rating {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+}
+.book-details-heading-rating-icon {
+  height: 24px;
+  width: 24px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 2px;
+  color: #fbbf24;
+}
+.book-details-heading-rating-containers {
+  display: flex;
+  margin: 0;
+  flex-direction: row;
+  color: #475569;
+}
+.book-status-item {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: left;
+}
+.book-status-items {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: left;
+  margin-left: 8px;
+  color: #0284c7;
+}
+.book-details-hr {
+  width: 90%;
+  margin-top: 32px;
+}
+.book-about-container {
+  width: 90%;
+  margin: auto;
+}
+.about-container-heading {
+  font-family: Inter;
+  font-style: normal;
+  letter-spacing: 0;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: #334155;
+}
+.about-container-content {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #475569;
+  font-family: Inter;
+  font-style: normal;
+  letter-spacing: 0;
+  text-align: left;
+}

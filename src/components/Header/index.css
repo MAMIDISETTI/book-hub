@@ -8,6 +8,11 @@
   height: 89px;
   border: 1px solid #e4e7eb;
 }
+@media screen and (max-width: 767px) {
+  .navbar-container-large {
+    display: none;
+  }
+}
 .navbar-book-hub-log-container {
   margin-left: 150px;
   display: flex;
@@ -56,4 +61,67 @@
   background-color: #0284c7;
   color: #fff;
   border: none;
+  margin-right: 10px;
+}
+
+/* ..........  */
+
+.navbar-container-small-container {
+  min-height: 56px;
+  border: 1px solid #e4e7eb;
+}
+@media screen and (min-width: 768px) {
+  .navbar-container-small-container {
+    display: none;
+  }
+}
+.navbar-container-small {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navbar-book-hub-container-small {
+  display: flex;
+  flex-direction: row;
+  margin-left: 24px;
+}
+.book-hub-login-image-small {
+  height: 24px;
+  width: 90%;
+  border-radius: 0px;
+  align-self: center;
+}
+.navbar-un-order-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+  list-style-type: none;
+  padding: 0;
+}
+.navbar-list-items {
+  margin-bottom: 15px;
+}
+.navbar-button-small {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 32px;
+  width: 73px;
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+  padding: 8px, 16px, 8px, 16px;
+  background-color: #0284c7;
+  color: #fff;
+  border: none;
+}
+.button-hamburger {
+  height: 2px;
+  width: 14px;
+  left: 1px;
+  top: 3px;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  margin-right: 22px;
+  margin-top: 22px;
 }

@@ -6,6 +6,8 @@
   width: 40%;
   min-width: 300px;
   margin-top: 20px;
+  display: flex;
+  align-items: center;
 }
 .books-container {
   display: flex;
@@ -86,4 +88,15 @@
   line-height: 16px;
   color: #0284c7;
   margin-left: 8px;
+}
+
+/*    */
+
+.bookshelves-menu-ul-small {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }

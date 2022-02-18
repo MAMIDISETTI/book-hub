@@ -27,11 +27,6 @@
 .active-category-name {
   background-color: #0284c7;
 }
-@media screen and (min-width: 765px) {
-  .active-category-name {
-    display: none;
-  }
-}
 
 .category-desc {
   color: #475569;
@@ -44,4 +39,18 @@
 .active-desc {
   color: #0284c7;
   font-weight: bold;
+}
+@media screen and (max-width: 765px) {
+  .filters-book-items-desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 765px) {
+  .filters-book-items-small {
+    display: none;
+  }
+}
+.filters-book-items-small {
+  margin-right: 20px;
+  margin-top: 20px;
 }
